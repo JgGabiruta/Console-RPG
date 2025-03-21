@@ -24,6 +24,10 @@ namespace Console_RPG
             MostrarPersonagem();
             Caracteristicas = new Atributos(Level);
         }
+        public void MostrarVida()
+        {
+            Console.WriteLine($"Vida: {Vida}");
+        }
         public void MostrarPersonagem()
         {
             Console.WriteLine($"Nome do personagem: {NomePersonagem} \nNome do jogador: {NomeJogador} \nIdade: {Idade} anos");
