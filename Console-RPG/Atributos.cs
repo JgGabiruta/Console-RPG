@@ -11,16 +11,25 @@ namespace Console_RPG
         public int Str { get; set; }
         public int Dex { get; set; }
         public int Inteligence { get; set; }
-        public Atributos() 
+        public int Charisma { get; set; }
+        public Atributos(int level) 
         {
-            Str = 1;
-            Dex = 1;
-            Inteligence = 1;
-            MostrarAtributos(Str, Dex, Inteligence);
+            Str = level;
+            Dex = level;
+            Inteligence = level;
+            Charisma = level;
+            MostrarAtributos(Str, Dex, Inteligence, Charisma);
         }
-        public void MostrarAtributos(int str, int dex, int intel)
+        public void SubirAtributos()
         {
-            Console.WriteLine($"Força: {str} \nDestreza: {dex} \nInteligência: {intel}");
+            Str++;
+            Dex++;
+            Inteligence++;
+            Charisma++;
+        }
+        public void MostrarAtributos(int str, int dex, int intel, int charism)
+        {
+            Console.WriteLine($"Força: {str} \nDestreza: {dex} \nInteligência: {intel} \nCharisma: {charism}");
         }
     }
 }

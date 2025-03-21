@@ -12,15 +12,17 @@ namespace Console_RPG
         public string NomePersonagem { get; set; }
         public string NomeJogador { get; set; }
         public int Idade { get; set; }
+        public int Vida { get; set; }
         public Atributos Caracteristicas { get; set; }
         public Personagem(string nomeP, int idade, string nomeJ)
         {
             Level = 1;
+            Vida = 10;
             NomePersonagem = nomeP;
             NomeJogador = nomeJ;
             Idade = idade;
             MostrarPersonagem();
-            Caracteristicas = new Atributos();
+            Caracteristicas = new Atributos(Level);
         }
         public void MostrarPersonagem()
         {
